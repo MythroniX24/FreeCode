@@ -1,8 +1,8 @@
 {
-  "name": "@freecode/cli",
+  "name": "freecode",
   "version": "0.1.0",
-  "description": "FreeCode CLI — free, BYOK-first AI coding agent for the terminal.",
-  "license": "Apache-2.0",
+  "description": "FreeCode — A secure, production-ready AI coding CLI with BYOK, free-provider, and hosted gateway support.",
+  "license": "MIT",
   "type": "module",
   "bin": {
     "freecode": "./dist/index.js"
@@ -10,14 +10,46 @@
   "main": "./dist/index.js",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js"
+  },
   "engines": {
     "node": ">=20.11.0"
   },
+  "keywords": [
+    "ai",
+    "cli",
+    "coding",
+    "agent",
+    "typescript",
+    "anthropic",
+    "gateway",
+    "byok"
+  ],
+  "author": "MythroniX24",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MythroniX24/FreeCode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MythroniX24/FreeCode/issues"
+  },
+  "homepage": "https://github.com/MythroniX24/FreeCode#readme",
   "dependencies": {
     "@freecode/core": "0.1.0",
-    "commander": "14.0.3",
-    "zod": "4.6.5"
+    "commander": "^14.0.3",
+    "zod": "^4.6.5"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
   }
 }
