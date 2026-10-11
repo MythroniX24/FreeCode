@@ -1,0 +1,25 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.vitest-reports/
+freecode.workspace.json
+
+# Local config / secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+freecode.config.local.json
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Local runtime state
+.freecode/
+*.log

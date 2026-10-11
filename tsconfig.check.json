@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "incremental": false,
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": [
+    "packages/core/src/**/*.ts",
+    "packages/core/test/**/*.ts",
+    "packages/cli/src/**/*.ts",
+    "packages/cli/test/**/*.ts",
+    "packages/gateway/src/**/*.ts",
+    "packages/gateway/test/**/*.ts",
+    "vitest.config.ts",
+    "vitest.gateway.config.ts"
+  ],
+  "exclude": ["**/dist/**", "**/node_modules/**"]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@freecode/cli",
+  "version": "0.1.0",
+  "description": "FreeCode CLI — free, BYOK-first AI coding agent for the terminal.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "freecode": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "dependencies": {
+    "@freecode/core": "0.1.0",
+    "commander": "14.0.3",
+    "zod": "4.6.5"
+  }
+}

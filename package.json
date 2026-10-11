@@ -1,0 +1,46 @@
+{
+  "name": "freecode-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "FreeCode — a free, BYOK-first AI coding CLI with authorized free-model discovery and an optional self-hostable inference gateway.",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "workspaces": [
+    "packages/core",
+    "packages/cli",
+    "packages/gateway"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "build:clean": "tsc -b --clean",
+    "typecheck": "tsc -p tsconfig.check.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:gateway": "vitest run --config vitest.gateway.config.ts",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "audit": "npm audit --audit-level=high",
+    "lockfile:verify": "node scripts/verify-lockfile.mjs",
+    "freecode": "node packages/cli/dist/index.js",
+    "dev": "tsx packages/cli/src/index.ts",
+    "gateway:dev": "tsx packages/gateway/src/main.ts",
+    "gateway:start": "node packages/gateway/dist/main.js",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run build && npm run test"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@types/node": "24.19.1",
+    "@vitest/coverage-v8": "5.0.3",
+    "eslint": "9.39.5",
+    "prettier": "3.9.9",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.1",
+    "vitest": "5.0.3"
+  }
+}

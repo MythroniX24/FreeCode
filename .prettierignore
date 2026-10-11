@@ -1,0 +1,8 @@
+coverage/
+dist/
+node_modules/
+*.tsbuildinfo
+package-lock.json
+
+# Written into the build mirror at runtime by scripts/mirror.mjs.
+.freecode-mirror.json
